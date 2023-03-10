@@ -1,10 +1,22 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
   return (
-    <header>
-      <h1>Fund Me</h1>
-    </header>
+    <div>
+      <header>
+        <h1>Fund Me</h1>
+        {!props.currentAccount && (
+          <button className="waveButton" onClick={props.connectWallet}>
+            Connect Wallet
+          </button>
+        )}
+        {props.currentAccount && (
+          <button className="waveButton" onClick={props.connectWallet}>
+            Wallet Connected
+          </button>
+        )}
+      </header>
+    </div>
   );
 }
 
