@@ -139,3 +139,29 @@ form button {
   cursor: pointer;
   outline: none;
 }
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+li div {
+  margin-bottom: 5px;
+}
+
+strong {
+  font-weight: bold;
+}
