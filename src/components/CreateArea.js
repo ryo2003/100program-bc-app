@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
 function CreateArea(props) {
-  const [inputName, setInputName] = useState("");
-  const [inputIntro, setInputIntro] = useState("");
+  const [inputFundingGoal, setinputFundingGoal] = useState(0);
+  const [inputDeadline, setinputDeadline] = useState(0);
 
-  function nameChange(event) {
+  function fundingGoalChange(event) {
     const newValue = event.target.value;
-    setInputName(newValue);
-    console.log(inputName);
+    setinputFundingGoal(newValue);
+    //console.log(inputName);
   }
 
-  function introChange(event) {
+  function deadlineChange(event) {
     const newValue = event.target.value;
-    setInputIntro(newValue);
-    console.log(inputIntro);
+    setinputDeadline(newValue);
+    //console.log(inputIntro);
   }
 
   function onAdd() {
@@ -22,18 +22,40 @@ function CreateArea(props) {
 
   return (
     <div>
-      <form onSubmit={(event) => event.preventDefault()}>
-        <input name="name" placeholder="Name" onChange={nameChange} />
+      <form onSubmit={(event) => event.preventDefault()} class="campaignForm">
+        <label for="fundingGoal">Funding Goal:</label>
+        <input
+          type="number"
+          id="fundingGoal"
+          name="fundingGoal"
+          onChange={fundingGoalChange}
+          required
+        ></input>
+        <label for="deadline">Deadline:</label>
+        <input
+          type="number"
+          id="deadline"
+          name="deadline"
+          onChange={deadlineChange}
+          required
+        ></input>
+
+        <label for="campaignDescription">Campaign Description:</label>
         <textarea
-          name="intro"
-          placeholder="Introduce yourself"
-          rows="3"
-          onChange={introChange}
-        />
+          id="campaignDescription"
+          name="campaignDescription"
+        ></textarea>
         <button
-          onClick={() => props.createCampaign(100, 100, props.currentAccount)}
+          type="submit"
+          onClick={() =>
+            props.createCampaign(
+              inputFundingGoal,
+              inputDeadline,
+              props.currentAccount
+            )
+          }
         >
-          Add
+          Submit
         </button>
       </form>
     </div>
