@@ -59,7 +59,7 @@ header {
 
 header h1 {
   color: #fff;
-  font-family: "McLaren", cursive;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 200;
 }
 
@@ -88,6 +88,7 @@ footer p {
   margin-bottom: 6px;
 }
 .note p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1.1em;
   margin-bottom: 10px;
   white-space: pre-wrap;
