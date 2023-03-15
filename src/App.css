@@ -133,7 +133,7 @@ form textarea {
 form button {
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  position: absolute;
+  position: relative;
   right: 6px;
   bottom: 3px;
   background: #5326EC;
@@ -213,5 +213,6 @@ strong {
   }
   
   button:hover {
-  background-color: #0062cc;
+  background-color: #5326EC;
+  opacity: 0.8;
   }
