@@ -218,6 +218,8 @@ strong {
   }
 
   .waveButton {
-
+    float: right;
+    border-radius: 20px;
+    background-color: #E1458D;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
