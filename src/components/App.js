@@ -2,7 +2,7 @@ import "../App.css";
 import "../Header.css";
 import Header from "./Header";
 import CreateArea from "./CreateArea";
-importList from "./List";
+import List from "./List";
 import React, { useState, useEffect } from "react";
 
 /* ethers 変数を使えるようにする*/
