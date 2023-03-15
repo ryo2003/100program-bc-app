@@ -160,12 +160,18 @@ h2 {
 }
 
 ul {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  list-style: none;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 li {
+  width: calc(33.3% - 5px);
+  margin-bottom: 10px;
   background-color: #fff;
   border: 1px solid white;
   padding: 10px;
