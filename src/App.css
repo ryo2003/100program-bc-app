@@ -28,6 +28,10 @@
   color: white;
 }
 
+.Header-waveButton{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .App-link {
   color: #61dafb;
 }
