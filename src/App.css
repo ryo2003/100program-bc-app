@@ -218,6 +218,8 @@ strong {
   }
 
   .waveButton {
+    position: relative;
+    top: -25px;
     float: right;
     border-radius: 20px;
     background-color: #E1458D;
