@@ -28,9 +28,6 @@
   color: white;
 }
 
-.Header-waveButton{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
 .App-link {
   color: #61dafb;
@@ -218,4 +215,9 @@ strong {
   button:hover {
   background-color: #5326EC;
   opacity: 0.8;
+  }
+
+  .Header-waveButton{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
