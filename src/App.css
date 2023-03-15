@@ -114,7 +114,7 @@ footer p {
 form {
   position: relative;
   width: 480px;
-  margin: 30px auto 20px auto;
+  margin: auto;
   background: #fff;
   padding: 15px;
   border-radius: 7px;
