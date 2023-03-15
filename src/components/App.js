@@ -1,5 +1,4 @@
 import "../App.css";
-import "../Header.css";
 import Header from "./Header";
 import CreateArea from "./CreateArea";
 import List from "./List";
