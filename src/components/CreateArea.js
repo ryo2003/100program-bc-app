@@ -16,10 +16,6 @@ function CreateArea(props) {
     //console.log(inputIntro);
   }
 
-  function onAdd() {
-    console.log("clicked");
-  }
-
   return (
     <div>
       <form onSubmit={(event) => event.preventDefault()} class="campaignForm">

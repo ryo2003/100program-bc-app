@@ -168,14 +168,24 @@ const App = () => {
     };
   }, []);
 
-  const [items, setItems] = useState([]);
+  //sending ether
+  const [recipient, setRecipient] = useState("");
+  const [amount, setAmount] = useState("");
 
-  function addItem(inputText) {
-    setItems((prevItems) => {
-      return [...prevItems, inputText];
+  async function sendEther() {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+
+    const contract = new ethers.Contract(contractAddress, contractABI, signer);
+
+    const tx = await contract.sendEther(recipient, {
+      value: ethers.utils.parseEther(amount),
     });
-  }
 
+    await tx.wait();
+
+    console.log("Transaction hash:", tx.hash);
+  }
   return (
     <div>
       <Header connectWallet={connectWallet} currentAccount={currentAccount} />
@@ -199,6 +209,27 @@ const App = () => {
           </li>
         ))}
       </ul>
+      <div>
+        <label>
+          Recipient:
+          <input
+            type="text"
+            value={recipient}
+            onChange={(e) => setRecipient(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Amount:
+          <input
+            type="text"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+        </label>
+        <br />
+        <button onClick={sendEther}>Send Ether</button>
+      </div>
     </div>
   );
 };
